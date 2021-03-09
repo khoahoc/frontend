@@ -55,5 +55,10 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['(:any)'] = 'pages/view_login';
 $route['admin/logout'] = 'login/logout';
+// Utils
 $route['admin/ssh-config'] = 'sshconfig/download';
+
+// Devices
+$route['admin/data-table-devices']  = 'devices/table_devices';
+
 $route['admin/(:any)'] = 'pages/view_admin/$1';

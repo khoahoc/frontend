@@ -41,11 +41,13 @@ class Sshconfig extends CI_Controller
         // print_r($servers);
         // // print_r($servers_raw);
         // die();
+        echo "# Please put this file into folder ~/.ssh/ with name config (~/.ssh/config)";
+
         foreach ($servers as $server) {
             echo $this->sshConfigTemplate($server['hostname'], $server['wan_ip'], $server['username'], $server['ssh_wan_port']);
         }
         header("Content-type: text/none");
-        header("Content-disposition: inline; filename=ssh_config");
+        header("Content-disposition: inline; filename=config");
     }
 }
 
